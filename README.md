@@ -136,11 +136,11 @@ This is a fork of @wong2's ChatGPT Google extension, ported to Firefox by someon
 > Reading manifest: Error processing content_scripts.0.matches.0: Value "https://*.google.*/search*" must either: be one of ["<all_urls>"], must either [match the pattern /^(https?|wss?|file|ftp|\*):\/\/(\*|\*\.[^*/]+|[^*/]+)\/.*$/, or match the pattern /^file:\/\/\/.*$/], or match the pattern /^resource:\/\/(\*|\*\.[^*/]+|[^*/]+)\/.*$|^about:/
 > ```
 
-> **ChatGPT:** This error indicates that the content_scripts.0.matches.0 property in the manifest file is using an invalid value. In this case, the value "https://\*.google.\*/search*" is not allowed by Firefox, because it does not match any of the supported patterns for URL patterns in Firefox extensions.
+> **ChatGPT:** This error indicates that the content_scripts.0.matches.0 property in the manifest file is using an invalid value. In this case, the value `"https://*.google.*/search*"` is not allowed by Firefox, because it does not match any of the supported patterns for URL patterns in Firefox extensions.
 > 
 > To fix this error, you will need to update the content_scripts.0.matches.0 property to use a supported URL pattern. In general, the supported patterns are:
 > - "<all_urls>": This pattern matches all URLs, allowing the content script to run on all pages.
-> - "http://\*/\*" or "https://\*/\*": These patterns match all URLs that use the http or https scheme, respectively. They allow the content script to run on pages that use these schemes, but not on pages that use other schemes (such as file or ftp).
-> - "http://example.com/\*" or "https://example.com/\*": These patterns match all URLs on the example.com domain that use the http or https scheme, respectively. They allow the content script to run on pages on the specified domain, but not on pages on other domains or pages that use other schemes.
+> - `"http://*/*"` or `"https://*/*"`: These patterns match all URLs that use the http or https scheme, respectively. They allow the content script to run on pages that use these schemes, but not on pages that use other schemes (such as file or ftp).
+> - `"http://example.com/*"` or `"https://example.com/*"`: These patterns match all URLs on the example.com domain that use the http or https scheme, respectively. They allow the content script to run on pages on the specified domain, but not on pages on other domains or pages that use other schemes.
 > 
 > [... blabbery omitted]
