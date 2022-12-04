@@ -18,7 +18,7 @@ async function run(question) {
     document.getElementById("rcnt").appendChild(container);
   }
 
-  const port = chrome.runtime.connect();
+  const port = browser.runtime.connect();
   port.onMessage.addListener(function (msg) {
     if (msg.answer) {
       container.innerHTML = `<p><span class="prefix">ChatGPT:</span><pre>${msg.answer}</pre></p>`;
