@@ -110,7 +110,7 @@ This is a fork of @wong2's ChatGPT Google extension, ported to Firefox by someon
 
 > **Me:** Perfect, thanks! You also mentioned that the extension's code would need to be modified. Here's the contents of `content-script.js`:
 >
-> _[full current content-script.json contents, in a code block]_
+> _[full original content-script.json contents, in a code block]_
 
 > **ChatGPT:** In order to make the content-script.js file compatible with Firefox, you would need to make the following modifications:
 > 1. Replace any instances of chrome.runtime.connect() with browser.runtime.connect(). In Firefox, the chrome.runtime API is replaced by the browser.runtime API, so any references to chrome.runtime in the code will need to be updated to use the correct API.
