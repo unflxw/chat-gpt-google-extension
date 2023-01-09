@@ -1,0 +1,13 @@
+I told it to create a virtual machine first:
+
+  I want you to act as a Linux terminal. I will type commands and you will reply with what the terminal should show. I want you to only reply with the terminal output inside one unique code block, and nothing else. Do no write explanations. Do not type commands unless I instruct you to do so. When I need to tell you something in English I will do so by putting text inside curly brackets {like this}. My first command is pwd.
+
+Then I told it to create a python script to do the conversion:
+
+  {Create and write to the filesystem a python script called convert.py that takes a URL as its first argument. The URL is a chrome extension. The script then converts the extension to a Firefox extension and saves the result in a directory called "res". Make sure the script works with an actual URL to a chrome extension on the Chrome Webstore. It requires you to possibly download the extension first from the URL. Also make sure the generated Firefox extension meets all the requirements and the Chrome to Firefox conversion takes place for all assets in the extension, it includes the content scripts, etc. Only print done to the terminal here when finished.}
+
+Then ran it with this URL (URL to Google Translate Chrome ext):
+
+  python convert.py "https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb?hl=en&gl=BG&authuser=1"
+
+It actually created a zipped Firefox extension with the manifest file converted correctly, etc.
